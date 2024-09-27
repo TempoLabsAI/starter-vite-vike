@@ -1,7 +1,7 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { tempo } from "tempo-devtools/dist/vite";
+import vike from 'vike/plugin'
 
 const conditionalPlugins: [string, Record<string, any>][] = [];
 
@@ -22,7 +22,7 @@ export default defineConfig({
     react({
       plugins: conditionalPlugins,
     }),
-    tempo(),
+    vike(),
   ],
   resolve: {
     preserveSymlinks: true,

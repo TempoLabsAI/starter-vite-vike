@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
-import routes from 'tempo-routes';
-import { useRoutes, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './components/home';
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
-      {useRoutes(routes)}
       </>
     </Suspense>
   )
